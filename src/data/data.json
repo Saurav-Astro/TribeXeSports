@@ -1,0 +1,643 @@
+{
+  "site": {
+    "title": "Valorant ",
+    "description": "Explore all Valorant agents in a neon glassmorphism UI with parallax, rain, and custom cursor effects.",
+    "canonical": "/"
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "All Agents", "href": "#all-agents" },
+    { "label": "Overview", "href": "#overview" }
+  ],
+  "characters": [
+    {
+      "slug": "brimstone",
+      "name": "Brimstone",
+      "role": "Controller",
+      "tagline": "Open up the sky!",
+      "description": "Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance makes him the unmatched boots-on-the-ground commander.",
+      "theme": {
+        "primary": "25 80% 50%",
+        "glow": "30 90% 60%",
+        "header": "25 80% 50%",
+        "gradientFrom": "20 75% 45%",
+        "gradientTo": "35 85% 55%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/displayicon.png",
+        "alt": "Brimstone official full portrait"
+      },
+      "abilities": [
+        { "name": "Incendiary", "description": "Launch a grenade that detonates into a lingering fire zone." },
+        { "name": "Stim Beacon", "description": "Toss down a stim beacon that creates a field granting players RapidFire." },
+        { "name": "Sky Smoke", "description": "Use your map to call in smoke clouds that block vision." },
+        { "name": "[X] Orbital Strike", "description": "Launch a lingering orbital strike laser at a selected location, dealing high damage over time to players caught in the area." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-brimstone" }]
+    },
+    {
+      "slug": "viper",
+      "name": "Viper",
+      "role": "Controller",
+      "tagline": "Welcome to my world!",
+      "description": "The American chemist, Viper deploys an array of poisonous chemical devices to control the battlefield and cripple the enemy's vision. If the toxins don't kill her prey, her mind games surely will.",
+      "theme": {
+        "primary": "140 90% 45%",
+        "glow": "145 95% 60%",
+        "header": "140 90% 45%",
+        "gradientFrom": "140 85% 40%",
+        "gradientTo": "160 95% 55%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/displayicon.png",
+        "alt": "Viper official full portrait"
+      },
+      "abilities": [
+        { "name": "Snake Bite", "description": "Launch a canister that shatters into a pool of damaging acid." },
+        { "name": "Poison Cloud", "description": "Deploy a gas emitter that can be reactivated for a toxic cloud at the cost of fuel." },
+        { "name": "Toxic Screen", "description": "Deploy a long line of gas emitters that can be reactivated to create a tall wall of toxic gas at the cost of fuel." },
+        { "name": "[X] Viper's Pit", "description": "Emit a massive toxic cloud in a large area that highlights enemies and lasts as long as Viper stays inside the cloud." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-viper" }]
+    },
+    {
+      "slug": "omen",
+      "name": "Omen",
+      "role": "Controller",
+      "tagline": "Watch them run.",
+      "description": "A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to figure out where he might strike next.",
+      "theme": {
+        "primary": "258 85% 60%",
+        "glow": "265 100% 70%",
+        "header": "258 85% 60%",
+        "gradientFrom": "260 85% 50%",
+        "gradientTo": "280 90% 65%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/displayicon.png",
+        "alt": "Omen official full portrait"
+      },
+      "abilities": [
+        { "name": "Shrouded Step", "description": "Teleport to a marked location to reposition unpredictably." },
+        { "name": "Paranoia", "description": "Send out a shade that nearsights and deafens enemies it touches." },
+        { "name": "Dark Cover", "description": "Cast out a stealth orb that bursts into a large, long-lasting shadow sphere." },
+        { "name": "[X] From the Shadows", "description": "Select anywhere on the map to teleport and reform. When arriving, appear as a Shade that can be destroyed by an enemy to cancel your teleport." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-omen" }]
+    },
+    {
+      "slug": "killjoy",
+      "name": "Killjoy",
+      "role": "Sentinel",
+      "tagline": "Initiated!",
+      "description": "The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn't stop her enemies, her robots' debuff will help make short work of them.",
+      "theme": {
+        "primary": "60 90% 50%",
+        "glow": "65 100% 60%",
+        "header": "60 90% 50%",
+        "gradientFrom": "55 85% 45%",
+        "gradientTo": "70 95% 55%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/displayicon.png",
+        "alt": "Killjoy official full portrait"
+      },
+      "abilities": [
+        { "name": "Nanoswarm", "description": "Throw a covert grenade. Activate the Nanoswarm to deploy a damaging swarm of nanobots." },
+        { "name": "Alarmbot", "description": "Deploy a bot that hunts down enemies in range, exploding and applying the Vulnerable effect." },
+        { "name": "Turret", "description": "Deploy a turret that fires at enemies in a 180-degree cone." },
+        { "name": "[X] Lockdown", "description": "Deploy a device that, after a long windup, detains all enemies caught in the radius, slowing them and preventing them from using weapons or abilities." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-killjoy" }]
+    },
+    {
+      "slug": "cypher",
+      "name": "Cypher",
+      "role": "Sentinel",
+      "tagline": "Where is everyone hiding?",
+      "description": "The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.",
+      "theme": {
+        "primary": "45 80% 60%",
+        "glow": "50 90% 70%",
+        "header": "45 80% 60%",
+        "gradientFrom": "40 75% 55%",
+        "gradientTo": "55 85% 65%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/displayicon.png",
+        "alt": "Cypher official full portrait"
+      },
+      "abilities": [
+        { "name": "Trapwire", "description": "Place a destructible and covert tripwire that tethers, reveals, and dazes enemies who cross it." },
+        { "name": "Cyber Cage", "description": "Toss a cyber cage that creates a zone that blocks vision and makes a sound when enemies pass through." },
+        { "name": "Spycam", "description": "Place a remote camera. Re-use this ability to take control of the camera view and fire a marking dart." },
+        { "name": "[X] Neural Theft", "description": "Extract information from a dead enemy, revealing the location of all living enemy players." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-cypher" }]
+    },
+    {
+      "slug": "sova",
+      "name": "Sova",
+      "role": "Initiator",
+      "tagline": "Nowhere to run.",
+      "description": "Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.",
+      "theme": {
+        "primary": "210 80% 60%",
+        "glow": "215 90% 70%",
+        "header": "210 80% 60%",
+        "gradientFrom": "205 75% 55%",
+        "gradientTo": "220 85% 65%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/displayicon.png",
+        "alt": "Sova official full portrait"
+      },
+      "abilities": [
+        { "name": "Shock Bolt", "description": "Fire an explosive bolt that emits a damaging pulse of static energy upon impact." },
+        { "name": "Recon Bolt", "description": "Fire a bolt that deploys a sonar emitter, tagging and revealing nearby enemies." },
+        { "name": "Owl Drone", "description": "Deploy a pilotable drone that can fire a dart that will reveal enemies." },
+        { "name": "[X] Hunter's Fury", "description": "Fire up to three deadly energy blasts that spear across the entire map. Each hit deals heavy damage and marks the target." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-sova" }]
+    },
+    {
+      "slug": "sage",
+      "name": "Sage",
+      "role": "Sentinel",
+      "tagline": "Your duty is not over!",
+      "description": "The bastion of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.",
+      "theme": {
+        "primary": "180 70% 55%",
+        "glow": "185 80% 65%",
+        "header": "180 70% 55%",
+        "gradientFrom": "175 65% 50%",
+        "gradientTo": "190 75% 60%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png",
+        "alt": "Sage official full portrait"
+      },
+      "abilities": [
+        { "name": "Slow Orb", "description": "Cast out a radianite orb that breaks into a slowing field upon impact with the ground." },
+        { "name": "Healing Orb", "description": "Heal an ally or yourself to full health over a few seconds." },
+        { "name": "Barrier Orb", "description": "Conjure a large, solid wall that can be fortified." },
+        { "name": "[X] Resurrection", "description": "Target a friendly corpse. After a short delay, revive them with full health." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-sage" }]
+    },
+    {
+      "slug": "phoenix",
+      "name": "Phoenix",
+      "role": "Duelist",
+      "tagline": "Jokes over, you're dead!",
+      "description": "Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.",
+      "theme": {
+        "primary": "20 95% 55%",
+        "glow": "30 100% 60%",
+        "header": "25 95% 55%",
+        "gradientFrom": "18 90% 50%",
+        "gradientTo": "40 100% 60%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/displayicon.png",
+        "alt": "Phoenix official full portrait"
+      },
+      "abilities": [
+        { "name": "Blaze", "description": "Conjure a flame wall that obscures vision, damages enemies, and heals you." },
+        { "name": "Curveball", "description": "Throw a flare orb that curves and blinds opponents." },
+        { "name": "Hot Hands", "description": "Create a fire zone that damages enemies and heals you." },
+        { "name": "[X] Run it Back", "description": "Mark your location. If you die during this ability’s duration, or when this ability’s duration expires, you’ll be reborn at the marked location with full health." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-phoenix" }]
+    },
+    {
+      "slug": "jett",
+      "name": "Jett",
+      "role": "Duelist",
+      "tagline": "Watch this!",
+      "description": "Representing her home country of South Korea, Jett's agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies up before they even know what hit them.",
+      "theme": {
+        "primary": "205 100% 75%",
+        "glow": "210 100% 85%",
+        "header": "205 100% 75%",
+        "gradientFrom": "200 95% 70%",
+        "gradientTo": "215 100% 80%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png",
+        "alt": "Jett official full portrait"
+      },
+      "abilities": [
+        { "name": "Cloudburst", "description": "Instantly throw a projectile that expands into a brief vision-blocking cloud." },
+        { "name": "Updraft", "description": "Instantly propel Jett high into the air." },
+        { "name": "Tailwind", "description": "Instantly propel Jett in the direction she is moving." },
+        { "name": "[X] Blade Storm", "description": "Arm yourself with several deadly throwing knives that deal moderate damage and kill on headshots. A kill restores all daggers." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-jett" }]
+    },
+    {
+      "slug": "reyna",
+      "name": "Reyna",
+      "role": "Duelist",
+      "tagline": "The hunt begins!",
+      "description": "Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.",
+      "theme": {
+        "primary": "280 80% 60%",
+        "glow": "285 90% 70%",
+        "header": "280 80% 60%",
+        "gradientFrom": "275 75% 55%",
+        "gradientTo": "290 85% 65%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/displayicon.png",
+        "alt": "Reyna official full portrait"
+      },
+      "abilities": [
+        { "name": "Leer", "description": "Send out an ethereal, destructible eye. The eye will nearsight all enemies who look at it." },
+        { "name": "Devour", "description": "Instantly consume a nearby soul orb, rapidly healing. Health gained exceeding 100 will decay over time." },
+        { "name": "Dismiss", "description": "Instantly consume a nearby soul orb, becoming intangible for a short duration. If Empress is active, also become invisible." },
+        { "name": "[X] Empress", "description": "Enter a frenzy, increasing firing, equip, and reload speed dramatically. Scoring a kill renews the duration." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-reyna" }]
+    },
+    {
+      "slug": "raze",
+      "name": "Raze",
+      "role": "Duelist",
+      "tagline": "Here comes the party!",
+      "description": "Raze explodes out of Brazil with her big personality and big guns. With her blunt-force-trauma style of play, she excels at flushing entrenched enemies and clearing tight spaces with a generous dose of 'boom.'",
+      "theme": {
+        "primary": "15 90% 60%",
+        "glow": "25 100% 65%",
+        "header": "15 90% 60%",
+        "gradientFrom": "10 85% 55%",
+        "gradientTo": "30 95% 65%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/displayicon.png",
+        "alt": "Raze official full portrait"
+      },
+      "abilities": [
+        { "name": "Boom Bot", "description": "Deploy a bot that locks onto enemies in its frontal cone and chases them, exploding for heavy damage if it reaches them." },
+        { "name": "Blast Pack", "description": "Instantly throw a Blast Pack that will stick to surfaces. Re-use the ability to detonate, damaging and moving anything hit." },
+        { "name": "Paint Shells", "description": "Equip a cluster grenade. Fire to throw the grenade, which deals damage and creates sub-munitions, each dealing damage to anyone in their range." },
+        { "name": "[X] Showstopper", "description": "Equip a rocket launcher. Fire shoots a rocket that does massive area damage on contact with anything." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-raze" }]
+    },
+    {
+      "slug": "breach",
+      "name": "Breach",
+      "role": "Initiator",
+      "tagline": "Let's go!",
+      "description": "Breach, the bionic Swede, fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.",
+      "theme": {
+        "primary": "30 90% 55%",
+        "glow": "35 100% 65%",
+        "header": "30 90% 55%",
+        "gradientFrom": "25 85% 50%",
+        "gradientTo": "40 95% 60%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/displayicon.png",
+        "alt": "Breach official full portrait"
+      },
+      "abilities": [
+        { "name": "Aftershock", "description": "Fire a fusion charge to set a slow-acting burst through a wall, dealing heavy damage to anyone caught in its area." },
+        { "name": "Flashpoint", "description": "Fire a blinding charge through a wall that flashes to blind all players looking at it." },
+        { "name": "Fault Line", "description": "Equip a seismic blast. Hold Fire to increase the distance. Release to set off a quake, dazing all players in its zone." },
+        { "name": "[X] Rolling Thunder", "description": "Fire a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-breach" }]
+    },
+    {
+      "slug": "skye",
+      "name": "Skye",
+      "role": "Initiator",
+      "tagline": "Seek them out!",
+      "description": "Hailing from Australia, Skye and her band of beasts trail-blaze the way through hostile territory. With her creations hampering the enemy, and her power to heal others, the team is strongest and safest by Skye's side.",
+      "theme": {
+        "primary": "100 60% 50%",
+        "glow": "105 70% 60%",
+        "header": "100 60% 50%",
+        "gradientFrom": "95 55% 45%",
+        "gradientTo": "110 65% 55%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/displayicon.png",
+        "alt": "Skye official full portrait"
+      },
+      "abilities": [
+        { "name": "Regrowth", "description": "Equip a healing trinket to channel, healing allies in range and line of sight. Can be reused until her healing pool is depleted." },
+        { "name": "Trailblazer", "description": "Send out and take control of a Tasmanian tiger predator. Fire to leap forward, exploding in a concussive blast and damaging enemies." },
+        { "name": "Guiding Light", "description": "Equip a hawk trinket. Fire to send it forward. Hold fire to guide the hawk in the direction of your crosshair and re-use to transform it into a flash." },
+        { "name": "[X] Seekers", "description": "Send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it nearsights them." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-skye" }]
+    },
+    {
+      "slug": "yoru",
+      "name": "Yoru",
+      "role": "Duelist",
+      "tagline": "I'll handle this.",
+      "description": "Japanese native Yoru rips holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look.",
+      "theme": {
+        "primary": "240 80% 65%",
+        "glow": "245 90% 75%",
+        "header": "240 80% 65%",
+        "gradientFrom": "235 75% 60%",
+        "gradientTo": "250 85% 70%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayicon.png",
+        "alt": "Yoru official full portrait"
+      },
+      "abilities": [
+        { "name": "Fakeout", "description": "Equip an echo that mimics footsteps when activated. Fire to send the echo forward, or Alt-Fire to place it in place. Use to activate the echo." },
+        { "name": "Blindside", "description": "Throw an unstable dimensional fragment that, upon hitting a hard surface, winds up and flashes." },
+        { "name": "Gatecrash", "description": "Harness a rift tether. Fire to send it forward. Alt-Fire to place a stationary tether. Activate to teleport to the tether's location." },
+        { "name": "[X] Dimensional Drift", "description": "Equip a mask that can see between dimensions. Fire to drift into Yoru's dimension, unable to be affected or seen by enemies from the outside." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-yoru" }]
+    },
+    {
+      "slug": "astra",
+      "name": "Astra",
+      "role": "Controller",
+      "tagline": "World divided.",
+      "description": "Ghanaian Agent Astra harnesses the energies of the cosmos to reshape battlefields to her whim. With full command of her astral form and a talent for deep strategic foresight, she's always eons ahead of her enemy's next move.",
+      "theme": {
+        "primary": "270 80% 60%",
+        "glow": "275 90% 70%",
+        "header": "270 80% 60%",
+        "gradientFrom": "265 75% 55%",
+        "gradientTo": "280 85% 65%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/displayicon.png",
+        "alt": "Astra official full portrait"
+      },
+      "abilities": [
+        { "name": "Gravity Well", "description": "Place Stars in Astral Form. Activate a Star to form a Gravity Well, pulling players toward the center before it explodes." },
+        { "name": "Nova Pulse", "description": "Activate a Star to detonate a Nova Pulse, concussing all players in its area." },
+        { "name": "Nebula / Dissipate", "description": "Activate a Star to transform it into a Nebula (smoke). Use F on a Star to Dissipate it, returning it to be placed in a new location." },
+        { "name": "[X] Astral Form / Cosmic Divide", "description": "Activate to enter Astral Form where you can place Stars. When Cosmic Divide is charged, use it to form a massive wall that blocks bullets and heavily dampens audio." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-astra" }]
+    },
+    {
+      "slug": "kayo",
+      "name": "KAY/O",
+      "role": "Initiator",
+      "tagline": "You are powerless!",
+      "description": "KAY/O is a machine of war built for a single purpose: neutralizing radiants. His power to suppress enemy abilities cripples his opponents' capacity to fight back, securing him and his allies the ultimate edge.",
+      "theme": {
+        "primary": "220 80% 60%",
+        "glow": "225 90% 70%",
+        "header": "220 80% 60%",
+        "gradientFrom": "215 75% 55%",
+        "gradientTo": "230 85% 65%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/displayicon.png",
+        "alt": "KAY/O official full portrait"
+      },
+      "abilities": [
+        { "name": "FRAG/ment", "description": "Throw an explosive fragment that sticks to the floor and explodes multiple times, dealing near lethal damage at the center." },
+        { "name": "FLASH/drive", "description": "Throw a flash grenade that explodes after a short fuse, blinding anyone in line of sight." },
+        { "name": "ZERO/point", "description": "Throw a suppression blade that sticks to the first surface it hits, winds up, and suppresses anyone in the radius of the explosion." },
+        { "name": "[X] NULL/cmd", "description": "Overload with polarized radianite energy that empowers KAY/O and causes large energy pulses to emit from his location. Enemies hit with these pulses are suppressed for a short duration." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-kayo" }]
+    },
+    {
+      "slug": "chamber",
+      "name": "Chamber",
+      "role": "Sentinel",
+      "tagline": "You want to play? Let's play.",
+      "description": "Well-dressed and well-armed, French weapons designer Chamber expels aggressors with deadly precision. He leverages his custom arsenal to hold the line and pick off enemies from afar, with a contingency built for every plan.",
+      "theme": {
+        "primary": "50 85% 55%",
+        "glow": "55 95% 65%",
+        "header": "50 85% 55%",
+        "gradientFrom": "45 80% 50%",
+        "gradientTo": "60 90% 60%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayicon.png",
+        "alt": "Chamber official full portrait"
+      },
+      "abilities": [
+        { "name": "Trademark", "description": "Place a trap that scans for enemies. When a visible enemy comes in range, the trap creates a lingering field that slows players caught inside." },
+        { "name": "Headhunter", "description": "Activate to equip a heavy pistol with a custom scope." },
+        { "name": "Rendezvous", "description": "Place two teleport anchors. While on the ground and in range of an anchor, reactivate to quickly teleport to the other anchor." },
+        { "name": "[X] Tour De Force", "description": "Summon a powerful, custom sniper rifle that will kill an enemy with any direct hit. Killing an enemy creates a lingering field that slows players caught inside of it." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-chamber" }]
+    },
+    {
+      "slug": "neon",
+      "name": "Neon",
+      "role": "Duelist",
+      "tagline": "Hoy! I'm pissed!",
+      "description": "Filipino Agent Neon surges forward at shocking speeds, discharging bursts of bioelectric radiance as fast as her body generates it. She sprints ahead to catch enemies off guard, then strikes them down quicker than lightning.",
+      "theme": {
+        "primary": "230 90% 60%",
+        "glow": "235 100% 70%",
+        "header": "230 90% 60%",
+        "gradientFrom": "225 85% 55%",
+        "gradientTo": "240 95% 65%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayicon.png",
+        "alt": "Neon official full portrait"
+      },
+      "abilities": [
+        { "name": "Fast Lane", "description": "Fire two energy lines forward that rise into walls of static electricity, blocking vision and damaging enemies." },
+        { "name": "Relay Bolt", "description": "Instantly throw an energy bolt that bounces once, electrifying the ground below with a concussive blast." },
+        { "name": "High Gear", "description": "Instantly channel Neon’s power for increased speed. When charged, use Alt-Fire to trigger an electric slide." },
+        { "name": "[X] Overdrive", "description": "Unleash Neon’s full power and speed for a short duration. Fire to channel the power into a deadly lightning beam with high movement accuracy." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-neon" }]
+    },
+    {
+      "slug": "fade",
+      "name": "Fade",
+      "role": "Initiator",
+      "tagline": "Face your fear!",
+      "description": "Turkish bounty hunter, Fade, unleashes the power of raw nightmare to seize enemy secrets. Haunting, controlling, and tracking foes with her unique fear-based abilities, she is the one who finds you in the dark.",
+      "theme": {
+        "primary": "260 70% 45%",
+        "glow": "265 80% 55%",
+        "header": "260 70% 45%",
+        "gradientFrom": "255 65% 40%",
+        "gradientTo": "270 75% 50%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/displayicon.png",
+        "alt": "Fade official full portrait"
+      },
+      "abilities": [
+        { "name": "Prowler", "description": "Send out a Prowler that will travel in a straight line, locking onto and chasing any enemies or trails in their frontal vision cone." },
+        { "name": "Seize", "description": "Throw a knot of raw fear that ruptures on impact, tethering, deafening, and decaying caught enemies." },
+        { "name": "Haunt", "description": "Throw an orb that plummets and, on hitting the ground, transforms into a nightmarish entity that reveals the location of enemies in its line of sight." },
+        { "name": "[X] Nightfall", "description": "Unleash a wave of nightmare energy that can traverse through walls. The energy creates a trail to the opponent as well as deafens and decays them." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-fade" }]
+    },
+    {
+      "slug": "harbor",
+      "name": "Harbor",
+      "role": "Controller",
+      "tagline": "Let the tides turn.",
+      "description": "Hailing from India’s coast, Harbor storms the field wielding ancient technology with dominion over water. He unleashes frothing rapids and crushing waves to shield his allies and pummel those that oppose him.",
+      "theme": {
+        "primary": "190 70% 50%",
+        "glow": "195 80% 60%",
+        "header": "190 70% 50%",
+        "gradientFrom": "185 65% 45%",
+        "gradientTo": "200 75% 55%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/displayicon.png",
+        "alt": "Harbor official full portrait"
+      },
+      "abilities": [
+        { "name": "Cascade", "description": "Equip a wave of water. Fire to send the wave rolling forward and through walls, slowing players it hits." },
+        { "name": "Cove", "description": "Equip a sphere of shielding water that blocks bullets." },
+        { "name": "High Tide", "description": "Equip a wall of water. Fire to send the water forward. Hold fire to guide the water's path, creating a wall that slows players." },
+        { "name": "[X] Reckoning", "description": "Summon a geyser pool on the ground. Enemy players in the area are targeted by successive geyser strikes that concuss them." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-harbor" }]
+    },
+    {
+      "slug": "gekko",
+      "name": "Gekko",
+      "role": "Initiator",
+      "tagline": "You got this, buddies!",
+      "description": "Gekko the Angeleno leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to plant or defuse the Spike.",
+      "theme": {
+        "primary": "100 80% 45%",
+        "glow": "105 90% 55%",
+        "header": "100 80% 45%",
+        "gradientFrom": "95 75% 40%",
+        "gradientTo": "110 85% 50%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png",
+        "alt": "Gekko official full portrait"
+      },
+      "abilities": [
+        { "name": "Mosh Pit", "description": "Throw Mosh like a grenade. After landing, it duplicates across a large area and then explodes after a short delay." },
+        { "name": "Wingman", "description": "Send Wingman forward seeking enemies. If an enemy is found, he unleashes a concussive blast. Alt-Fire to send Wingman to plant or defuse the Spike." },
+        { "name": "Dizzy", "description": "Send Dizzy soaring forward. Dizzy charges and unleashes plasma blasts at enemies in their line of sight, blinding them." },
+        { "name": "[X] Thrash", "description": "Link with Thrash's mind and steer her through enemy territory. Activate to lunge forward and explode, detaining any enemies in a small radius." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-gekko" }]
+    },
+    {
+      "slug": "deadlock",
+      "name": "Deadlock",
+      "role": "Sentinel",
+      "tagline": "My territory, my rules.",
+      "description": "Norwegian operative Deadlock deploys an array of cutting-edge nanowire to secure the battlefield from even the most lethal assault. No one escapes her vigilant watch, or survives her unyielding grip.",
+      "theme": {
+        "primary": "220 50% 50%",
+        "glow": "225 60% 60%",
+        "header": "220 50% 50%",
+        "gradientFrom": "215 45% 45%",
+        "gradientTo": "230 55% 55%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/displayicon.png",
+        "alt": "Deadlock official full portrait"
+      },
+      "abilities": [
+        { "name": "GravNet", "description": "Throw a grenade that detonates upon landing, forcing any enemies caught within it to crouch and move slowly." },
+        { "name": "Sonic Sensor", "description": "Deploy a sensor that monitors an area for enemies making sound. It concusses that area if significant noise is detected." },
+        { "name": "Barrier Mesh", "description": "Throw a disc forward. Upon landing, the disc generates a barrier that blocks character movement." },
+        { "name": "[X] Annihilation", "description": "Unleash a pulse of nanowires that captures the first enemy contacted. The cocooned enemy is pulled along a nanowire path and will die if they reach the end, unless freed." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-deadlock" }]
+    },
+    {
+      "slug": "iso",
+      "name": "Iso",
+      "role": "Duelist",
+      "tagline": "Contract, closed.",
+      "description": "Chinese fixer for hire, Iso goes into a flow state to dismantle the opposition. Reconfiguring ambient energy into bulletproof protection, he proceeds with focus and lethality, advancing until the job is done.",
+      "theme": {
+        "primary": "280 60% 55%",
+        "glow": "285 70% 65%",
+        "header": "280 60% 55%",
+        "gradientFrom": "275 55% 50%",
+        "gradientTo": "290 65% 60%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/displayicon.png",
+        "alt": "Iso official full portrait"
+      },
+      "abilities": [
+        { "name": "Undercut", "description": "Equip a molecular bolt. Fire to throw it forward, applying a brief 'vulnerable' effect to all players it touches." },
+        { "name": "Double Tap", "description": "Start a focus timer. Once complete, downed enemies you kill or damage generate an energy orb. Shooting this orb grants a shield that absorbs one instance of damage." },
+        { "name": "Contingency", "description": "Assemble a prismatic wall of energy and fire to push it forward. The wall is bulletproof and blocks vision." },
+        { "name": "[X] Kill Contract", "description": "Hurl a column of energy through the battlefield, pulling you and the first enemy hit into a 1v1 arena. The winner leaves the arena, the loser dies." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-iso" }]
+    },
+    {
+      "slug": "clove",
+      "name": "Clove",
+      "role": "Controller",
+      "tagline": "Death is just the beginning.",
+      "description": "Scottish troublemaker Clove makes mischief for enemies in both the heat of combat and the cold of death. The young immortal keeps foes guessing, even from beyond the grave, as they return to the living.",
+      "theme": {
+        "primary": "300 90% 70%",
+        "glow": "310 100% 75%",
+        "header": "300 90% 70%",
+        "gradientFrom": "290 85% 65%",
+        "gradientTo": "320 95% 75%"
+      },
+      "images": {
+        "banner": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/fullportrait.png",
+        "thumb": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/displayicon.png",
+        "alt": "Clove official full portrait"
+      },
+      "abilities": [
+        { "name": "Pick-Me-Up", "description": "Instantly absorb the life force of a fallen enemy that Clove damaged or killed, gaining haste and temporary health." },
+        { "name": "Meddle", "description": "Throw a fragment of immortality essence, which erupts after a short delay and temporarily decays all targets caught inside." },
+        { "name": "Ruse", "description": "Set locations where Clove’s clouds will settle. Confirm to launch clouds that block vision in the chosen areas. Clove can use this ability after death." },
+        { "name": "[X] Not Dead Yet", "description": "After dying, activate to resurrect. Once resurrected, Clove must earn a kill or a damaging assist within a set time or they will die." }
+      ],
+      "actions": [{ "label": "View Contract", "href": "#contracts-clove" }]
+    }
+  ],
+  "sections": {
+    "overview": { "title": "Valorant Agents ", "subtitle": "" },
+    "abilities": { "title": "Agent Abilities", "subtitle": "Master each kit to dominate the match." }
+  }
+}
+ I want to apply this design on the home page. Do not touch other pages.

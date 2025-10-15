@@ -1,0 +1,82 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract futuristic background for hero section",
+      "imageUrl": "https://picsum.photos/seed/101/1920/1080",
+      "imageHint": "abstract futuristic"
+    },
+    {
+      "id": "tournament-1",
+      "description": "Valorant tournament banner",
+      "imageUrl": "https://picsum.photos/seed/102/600/400",
+      "imageHint": "esports valorant"
+    },
+    {
+      "id": "tournament-2",
+      "description": "League of Legends tournament banner",
+      "imageUrl": "https://picsum.photos/seed/103/600/400",
+      "imageHint": "esports league"
+    },
+    {
+      "id": "tournament-3",
+      "description": "CS:GO tournament banner",
+      "imageUrl": "https://picsum.photos/seed/104/600/400",
+      "imageHint": "esports csgo"
+    },
+    {
+      "id": "tournament-4",
+      "description": "Apex Legends tournament banner",
+      "imageUrl": "https://picsum.photos/seed/105/600/400",
+      "imageHint": "esports apex"
+    },
+    {
+      "id": "blog-1",
+      "description": "Blog post about gaming strategies",
+      "imageUrl": "https://picsum.photos/seed/201/500/300",
+      "imageHint": "gaming strategy"
+    },
+    {
+      "id": "blog-2",
+      "description": "Blog post about new gaming hardware",
+      "imageUrl": "https://picsum.photos/seed/202/500/300",
+      "imageHint": "gaming hardware"
+    },
+    {
+      "id": "blog-3",
+      "description": "Blog post about a recent tournament recap",
+      "imageUrl": "https://picsum.photos/seed/203/500/300",
+      "imageHint": "esports recap"
+    },
+    {
+      "id": "avatar-1",
+      "description": "Player avatar 1",
+      "imageUrl": "https://picsum.photos/seed/301/100/100",
+      "imageHint": "gamer portrait"
+    },
+    {
+      "id": "avatar-2",
+      "description": "Player avatar 2",
+      "imageUrl": "https://picsum.photos/seed/302/100/100",
+      "imageHint": "gamer portrait"
+    },
+    {
+      "id": "avatar-3",
+      "description": "Player avatar 3",
+      "imageUrl": "https://picsum.photos/seed/303/100/100",
+      "imageHint": "gamer portrait"
+    },
+    {
+      "id": "avatar-4",
+      "description": "Player avatar 4",
+      "imageUrl": "https://picsum.photos/seed/304/100/100",
+      "imageHint": "gamer portrait"
+    },
+    {
+      "id": "avatar-5",
+      "description": "Player avatar 5",
+      "imageUrl": "https://picsum.photos/seed/305/100/100",
+      "imageHint": "gamer portrait"
+    }
+  ]
+}
