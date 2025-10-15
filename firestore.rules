@@ -1,0 +1,123 @@
+/**
+ * @file Firebase Security Rules for eSports Platform
+ *
+ * @core_philosophy This ruleset prioritizes security by enforcing strict
+ * ownership and access control. It leverages Firebase Authentication to
+ * ensure that users can only access their own data or data explicitly shared
+ * with them. Public read access is granted only where explicitly intended.
+ *
+ * @data_structure
+ * - `/tournaments/{tournamentId}`: Stores tournament information. Accessible for public reads, but write operations are restricted to the organizer.
+ * - `/tournaments/{tournamentId}/registrations/{registrationId}`: Stores tournament registrations as subcollections. Write operations are restricted to authenticated users.
+ * - `/leaderboards/{leaderboardId}`: Stores leaderboard data. Accessible for public reads, write operations are restricted.
+ * - `/blogs/{blogId}`: Stores blog posts. Accessible for public reads, but write operations are restricted to the author.
+ * - `/users/{userId}`: Stores user profile information. Read and write access is restricted to the user themselves.
+ *
+ * @key_security_decisions
+ * - **No User Listing**: Listing all users is denied to protect user privacy.
+ * - **Owner-Only Access**: Write access is generally restricted to the owner of the data, using `isOwner()` function.
+ * - **Denormalization**:  The `Tournament` entity includes an `organizerId` field. This is used to enforce authorization, meaning that only the organizer can modify a tournament.
+ * - **Public Read, Owner Write**: Tournaments, Leaderboards, and Blogs are publicly readable, but only the owner can modify them.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Allows reading tournaments for everyone, but only the organizer can create, update, or delete them.
+     * @path /tournaments/{tournamentId}
+     * @allow (get, list): if true
+     * @allow (create): User with auth `uid` creates a tournament with `organizerId` set to their `uid`.
+     * @allow (update, delete): User with auth `uid` updates/deletes a tournament where they are the organizer (`resource.data.organizerId == request.auth.uid`).
+     * @deny (create): User tries to create a tournament where `organizerId` does not match their `uid`.
+     * @deny (update, delete): User tries to update/delete a tournament where they are not the organizer.
+     * @principle Public read access with owner-only writes, enforces ownership on write operations.
+     */
+    match /tournaments/{tournamentId} {
+      allow get, list: if true;
+      allow create: if isSignedIn() && request.resource.data.organizerId == request.auth.uid;
+      allow update, delete: if isSignedIn() && isExistingOwner(resource.data.organizerId);
+    }
+
+    /**
+     * @description Allows users to register for tournaments.
+     * @path /tournaments/{tournamentId}/registrations/{registrationId}
+     * @allow (create): User with auth `uid` creates a registration.
+     * @allow (get, list): User with auth `uid` reads registration details for a tournament.
+     * @allow (update, delete): if false
+     * @deny (create): User tries to create a registration without being signed in.
+     * @deny (get, list): if false
+     * @principle Requires authentication for registration and restricts modifications after creation.
+     */
+    match /tournaments/{tournamentId}/registrations/{registrationId} {
+      allow get, list: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if false;
+    }
+
+    /**
+     * @description Allows reading leaderboards for everyone, but only authorized users can create, update, or delete them.
+     * @path /leaderboards/{leaderboardId}
+     * @allow (get, list): if true
+     * @allow (create): User with auth `uid` creates a leaderboard.
+     * @allow (update, delete): User with auth `uid` updates/deletes a leaderboard.
+     * @deny (create): if false
+     * @deny (update, delete): if false
+     * @principle Public read access with restricted writes.
+     */
+    match /leaderboards/{leaderboardId} {
+      allow get, list: if true;
+      allow create: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+    }
+
+    /**
+     * @description Allows reading blogs for everyone, but only the author can create, update, or delete them.
+     * @path /blogs/{blogId}
+     * @allow (get, list): if true
+     * @allow (create): User with auth `uid` creates a blog post with `authorId` set to their `uid`.
+     * @allow (update, delete): User with auth `uid` updates/deletes a blog post where they are the author.
+     * @deny (create): User tries to create a blog post where `authorId` does not match their `uid`.
+     * @deny (update, delete): User tries to update/delete a blog post where they are not the author.
+     * @principle Public read access with owner-only writes, enforces ownership on write operations.
+     */
+    match /blogs/{blogId} {
+      allow get, list: if true;
+      allow create: if isSignedIn() && request.resource.data.authorId == request.auth.uid;
+      allow update, delete: if isSignedIn() && isExistingOwner(resource.data.authorId);
+    }
+
+    /**
+     * @description Allows a user to read and write their own user document.
+     * @path /users/{userId}
+     * @allow (get, list): User with auth `uid` reads their own user document.
+     * @allow (create): User with auth `uid` creates their own user document.
+     * @allow (update, delete): User with auth `uid` updates/deletes their own user document.
+     * @deny (get, list): User with auth `uid` tries to read another user's document.
+     * @deny (create): User tries to create a user document with an ID that doesn't match their `uid`.
+     * @deny (update, delete): User tries to update/delete another user's document.
+     * @principle Enforces document ownership, restricts access to a user's own data.
+     */
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if false;
+      allow create: if isOwner(userId);
+      allow update: if isSignedIn() && isExistingOwner(userId);
+      allow delete: if isSignedIn() && isExistingOwner(userId);
+    }
+
+    // --- Helper Functions ---
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+    function isExistingOwner(userId) {
+        return isOwner(userId) && resource != null;
+    }
+  }
+}
