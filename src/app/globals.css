@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%; /* #0a0a0a */
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 344 100% 50%; /* Neon Red: #ff0044 */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 180 100% 50%; /* Neon Cyan: #00ffff */
+    --accent-foreground: 240 5.9% 10%;
+    --tertiary: 282 100% 50%; /* Neon Purple: #b100ff */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 344 100% 50%;
+    --radius: 0.5rem;
+
+    --chart-1: 344 100% 50%;
+    --chart-2: 180 100% 50%;
+    --chart-3: 282 100% 50%; /* Neon Purple */
+    --chart-4: 220 70% 50%;
+    --chart-5: 160 60% 45%;
+
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 344 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 344 100% 50%;
+
+    --dashboard-background: 0 0% 4%;
+    --dashboard-sidebar: 240 8% 8%;
+    --dashboard-card: 240 7% 12%;
+    --dashboard-primary: 344 83% 50%;
+    --dashboard-muted-foreground: 240 5% 64.9%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 344 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 180 100% 50%;
+    --accent-foreground: 240 5.9% 10%;
+    --tertiary: 282 100% 50%; /* Neon Purple */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 344 100% 50%;
+
+    --chart-1: 344 100% 50%;
+    --chart-2: 180 100% 50%;
+    --chart-3: 282 100% 50%;
+    --chart-4: 220 70% 50%;
+    --chart-5: 160 60% 45%;
+    
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 344 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 344 100% 50%;
+
+    --dashboard-background: 0 0% 4%;
+    --dashboard-sidebar: 240 8% 8%;
+    --dashboard-card: 240 7% 12%;
+    --dashboard-primary: 344 83% 50%;
+    --dashboard-muted-foreground: 240 5% 64.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+  .prose {
+    @apply text-foreground;
+  }
+  .prose strong {
+    @apply text-foreground font-bold;
+  }
+  .prose ol, .prose ul {
+    @apply my-4 ml-6;
+  }
+  .prose ol {
+    @apply list-decimal;
+  }
+  .prose ul {
+    @apply list-disc;
+  }
+  .prose li {
+    @apply my-2;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 8px hsl(var(--primary)), 0 0 20px hsl(var(--primary));
+  }
+  .box-glow {
+    box-shadow: 0 0 15px -3px hsl(var(--primary) / 0.5), 0 0 30px -10px hsl(var(--primary) / 0.7);
+  }
+  .box-glow-accent {
+     box-shadow: 0 0 15px -3px hsl(var(--accent) / 0.5), 0 0 30px -10px hsl(var(--accent) / 0.7);
+  }
+  .glassmorphism {
+    @apply bg-card/50 backdrop-blur-lg border border-primary/20;
+  }
+  .grecaptcha-badge {
+    visibility: hidden !important;
+  }
+   .rounded-50 {
+    border-radius: 50px;
+  }
+  .nav-link-active {
+    @apply text-primary underline decoration-primary underline-offset-4;
+  }
+}
